@@ -5,45 +5,67 @@
     android:orientation="vertical"
     android:layout_margin="10dp">
 
-    <Button
-        android:id="@+id/btn1"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BUTTON1"
+        android:text="Touch Event"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
         />
 
-    <CheckBox
-        android:id="@+id/check1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="check1"
-        />
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:gravity="center">
 
-    <CheckBox
-        android:id="@+id/check2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="check2"
-        />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/radio1"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="radio1"
+            android:text="X = "
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
             />
 
-        <RadioButton
-            android:id="@+id/radio2"
+        <TextView
+            android:id="@+id/x"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="radio2"
+            android:text="0"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y = "
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
             />
 
-    </RadioGroup>
+        <TextView
+            android:id="@+id/y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
 
 </LinearLayout>

@@ -3,20 +3,27 @@ package com.example.doit
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.widget.Toast
 import com.example.doit.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private val binding = ActivityMainBinding.inflate(layoutInflater)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // 바인딩 객체 흭득
-        val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
 
-        // 뷰 객체 이용
-        binding.btn1.setOnClickListener {
-            binding.btn1.setBackgroundColor(Color.RED)
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        when (event?.action) {
+            MotionEvent.ACTION_DOWN -> {
+                binding.x.text = event.x.toString()
+                binding.y.text = event.y.toString()
+            }
+            MotionEvent.ACTION_UP -> {
+                Toast.makeText(this@MainActivity, "Touch Up Event", Toast.LENGTH_SHORT).show()
+            }
         }
+        return super.onTouchEvent(event)
     }
 }

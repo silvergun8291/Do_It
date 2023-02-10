@@ -16,3 +16,8 @@ rootProject.name = "Do It"
 include ':app'
 include ':ch6_view'
 include ':kakao_alarm1'
+include ':kakao_alarm2'
+include ':kakao_alarm3'
+include ':ch7_layout'
+
+include ':touch_event'
